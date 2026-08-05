@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f1ea;
+    color:#3e3e3e;
+}
+
+.book-details-container{
+
+    display:flex;
+
+    gap:50px;
+
+    padding:70px 8%;
+
+    align-items:flex-start;
+
+    flex-wrap:wrap;
+}
+
+.book-details-container img{
+
+    width:320px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.book-content{
+
+    flex:1;
+}
+
+.book-content h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    color:#5c4b3b;
+}
+
+.book-content p{
+
+    margin-bottom:15px;
+
+    line-height:1.8;
+}
+
+.reserve-btn{
+
+    margin-top:25px;
+
+    padding:16px 30px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#c7ab87;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+}

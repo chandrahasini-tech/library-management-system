@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | LumiShelf</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="auth-container">
+
+        <form class="auth-form" id="registerForm">
+
+            <h1>Create Account</h1>
+
+            <p>Join LumiShelf and explore books peacefully.</p>
+
+            <input type="text" id="name" placeholder="Full Name" required>
+
+            <input type="email" id="email" placeholder="Email Address" required>
+
+            <input type="password" id="password" placeholder="Password" required>
+
+            <input type="text" id="phone" placeholder="Phone Number" required>
+
+            <textarea id="address" placeholder="Address"></textarea>
+
+            <select id="role">
+
+                <option value="member">Member</option>
+                <option value="admin">Admin</option>
+
+            </select>
+
+            <button type="submit">Register</button>
+
+            <span>
+                Already have an account?
+                <a href="login.html">Login</a>
+            </span>
+
+        </form>
+
+    </div>
+
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

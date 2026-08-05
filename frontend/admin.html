@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LumiShelf Admin</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+<div class="dashboard-container">
+
+```
+<div class="top-bar">
+
+    <h1>📚 LumiShelf Admin Panel</h1>
+
+    <button
+        onclick="logout()"
+        class="logout-btn"
+    >
+        Logout
+    </button>
+
+</div>
+
+
+<!-- TABS -->
+
+<div class="admin-tabs">
+
+    <button
+        onclick="showSection('addBookSection')"
+        class="tab-btn"
+    >
+        Add Books
+    </button>
+
+    <button
+        onclick="showSection('userSection')"
+        class="tab-btn"
+    >
+        Users
+    </button>
+
+    <button
+        onclick="showSection('bookSection')"
+        class="tab-btn"
+    >
+        Library Books
+    </button>
+
+</div>
+
+
+
+<!-- ADD BOOK SECTION -->
+
+<div
+    id="addBookSection"
+    class="admin-section"
+>
+
+    <div class="dashboard-card">
+
+        <h2>Add New Book</h2>
+
+        <form id="bookForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Book Title"
+                required
+            >
+
+            <input
+                type="text"
+                id="author"
+                placeholder="Author Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="genre"
+                placeholder="Genre"
+                required
+            >
+
+            <input
+                type="number"
+                id="copies"
+                placeholder="Available Copies"
+                required
+            >
+
+            <input
+                type="text"
+                id="image"
+                placeholder="Image Path (images/book.jpg)"
+                required
+            >
+
+            <textarea
+                id="description"
+                placeholder="Book Description"
+            ></textarea>
+
+            <button type="submit">
+                Add Book
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- USERS SECTION -->
+
+<div
+    id="userSection"
+    class="admin-section"
+    style="display:none;"
+>
+
+    <h2 class="section-title">
+        Library Members
+    </h2>
+
+    <input
+        type="text"
+        id="userSearch"
+        placeholder="Search member by name or email..."
+        class="search-box"
+    >
+    <div class="date-filter">
+
+    <input
+        type="date"
+        id="userDate"
+    >
+
+
+</div>
+
+    <div
+        id="membersContainer"
+        class="members-container"
+    ></div>
+
+</div>
+
+
+
+<!-- BOOK SECTION -->
+
+<div
+    id="bookSection"
+    class="admin-section"
+    style="display:none;"
+>
+
+    <h2 class="section-title">
+    <h2 class="section-title">
+    Library Books
+</h2>
+
+<div
+    id="booksContainer"
+    class="members-container"
+></div>
+
+<h2 class="section-title">
+    Reserved Books
+</h2>
+
+<div
+    id="reservationsContainer"
+    class="members-container"
+></div>
+
+<h2 class="section-title">
+    Issued Books
+</h2>
+
+<div
+    id="issuesContainer"
+    class="members-container"
+></div>
+
+<script src="js/books.js"></script>
+
+<script src="js/admin.js"></script>
+
+<script>
+
+function showSection(sectionId){
+
+    document
+    .querySelectorAll(".admin-section")
+    .forEach(section=>{
+
+        section.style.display = "none";
+
+    });
+
+    document.getElementById(sectionId)
+    .style.display = "block";
+
+}
+
+function logout(){
+
+    localStorage.clear();
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+
+</body>
+</html>

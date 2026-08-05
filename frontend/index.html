@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>LumiShelf</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
+```
+
+</head>
+
+<body>
+
+```
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        LumiShelf
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#booksContainer">
+                Explore
+            </a>
+        </li>
+
+        <li>
+            <a href="#genres">
+                Genres
+            </a>
+        </li>
+
+        <li>
+            <a href="dashboard.html">
+                Profile
+            </a>
+        </li>
+
+        <li>
+            <a href="login.html">
+                Login
+            </a>
+        </li>
+
+        <li>
+            <a href="register.html">
+                Register
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- GLOW EFFECT -->
+
+<div class="hero-glow"></div>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Find Stories Before You Find Shelves
+        </h1>
+
+        <p>
+
+            Explore thousands of books, reserve them instantly,
+            and walk into your library knowing exactly where
+            your next adventure waits.
+
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search books, authors, genres..."
+            >
+
+            <button onclick="searchBooks()">
+
+                Search
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GENRES -->
+
+<section
+    class="genres"
+    id="genres"
+>
+
+    <h2>
+        Browse Genres
+    </h2>
+
+    <div class="genre-container">
+
+        <div
+            class="genre-card"
+            onclick="fetchBooks()"
+        >
+            All
+        </div>
+
+        <div
+            class="genre-card"
+            onclick="filterGenre('Adventure')"
+        >
+            Adventure
+        </div>
+
+        <div
+            class="genre-card"
+            onclick="filterGenre('Thriller')"
+        >
+            Thriller
+        </div>
+
+        <div
+            class="genre-card"
+            onclick="filterGenre('Romance')"
+        >
+            Romance
+        </div>
+
+        <div
+            class="genre-card"
+            onclick="filterGenre('Fantasy')"
+        >
+            Fantasy
+        </div>
+
+        <div
+            class="genre-card"
+            onclick="filterGenre('History')"
+        >
+            History
+        </div>
+
+        <div
+            class="genre-card"
+            onclick="filterGenre('Biography')"
+        >
+            Biography
+        </div>
+
+        <div
+            class="genre-card"
+            onclick="filterGenre('Self-help')"
+        >
+            Self-help
+        </div>
+
+        <div
+            class="genre-card"
+            onclick="filterGenre('Science Fiction')"
+        >
+            Science Fiction
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BOOKS -->
+
+<section class="books-section">
+
+    <h2>
+        Featured Books
+    </h2>
+
+    <div
+        class="books-container"
+        id="booksContainer"
+    >
+
+    </div>
+
+</section>
+
+
+<script src="js/main.js"></script>
+```
+
+</body>
+</html>
