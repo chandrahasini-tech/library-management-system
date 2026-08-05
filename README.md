@@ -25,14 +25,9 @@ It allows users to browse, reserve, and manage books with role-based access.
 * Backend: Node.js, Express.js
 * Database: MongoDB
 
-## Team Members
-
-(To be updated)
-
 ## Key Features
 
 * Book search by genre
 * Reservation with 10-day expiry
-* Fine calculation for late returns
 * Wishlist system
 * Admin control over users and books
